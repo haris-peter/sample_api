@@ -1,5 +1,6 @@
 from  django.urls import path
-from . import views
+
+from api_app.controller import Controller
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', Controller.get, name='index'),
 ]

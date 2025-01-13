@@ -1,5 +1,5 @@
 from rest_framework.response import Response
-from api_app.models import Message  # Import the model
+from apps.api_app.models import Message  # Import the model
 
 def index(request):
     """

@@ -1,5 +1,5 @@
 from rest_framework.response import Response
-from apps.api_app.models import Message  # Import the model
+from apps.api_app.models import get_message  # Import the model
 
 def index(request):
     """
@@ -7,8 +7,7 @@ def index(request):
     """
     # Fetch the first message from the database
     try:
-        message = Message.objects.first()  # Assuming there's at least one record
-        response = {"message": message.text if message else "No data found"}
+        response = {"message": get_message.text if get_message else "No data found"}
     except Exception as e:
         response = {"error": str(e)}
     

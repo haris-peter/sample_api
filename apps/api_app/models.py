@@ -5,3 +5,5 @@ class Message(models.Model):
 
     def __str__(self):
         return self.text
+def get_message():
+    return Message.objects.first()
